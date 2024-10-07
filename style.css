@@ -1,16 +1,33 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 20px;
     text-align: center;
-    padding: 20px;
+    background-color: #f0f0f0;
 }
-
+#canvasContainer {
+    display: inline-block;
+    position: relative;
+}
+#canvas {
+    border: 1px solid #333;
+    margin-top: 20px;
+    background-color: #fff;
+}
 button {
     margin: 10px;
     padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
-
-#preview {
-    width: 400px;
-    height: auto;
-    margin-top: 20px;
+#downloadBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+#downloadBtn:disabled {
+    background-color: #9E9E9E;
+    cursor: not-allowed;
+}
+input[type="file"] {
+    margin: 20px 0;
 }

@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Effect App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Image Bloom Effect Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+        }
+        input {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-<h1>Image Processing Toolkit</h1>
+<h1>Image Bloom Effect Processor</h1>
 
-<input type="file" id="fileInput" accept=".ppm" />
-
-<!-- Three separate buttons for different animations -->
-<button id="animateThreshold">Animate Thresholding</button>
-<button id="animateBlur">Animate Blur</button>
-<button id="applyBloom">Apply Bloom Effect</button>
-
-<button id="saveImage">Save Output</button>
+<input type="file" id="imageInput" accept=".ppm" />
+<br>
 
 <div>
-    <img id="preview" alt="Preview Image" />
+    <button id="thresholdBtn" disabled>Animate Threshold (Frames 1-120)</button>
+    <button id="blurBtn" disabled>Animate Blur (Frames 121-240)</button>
+    <button id="bloomBtn" disabled>Animate Bloom (Frames 241-360)</button>
 </div>
 
-<script src="renderer.js"></script>
+<button id="downloadBtn" disabled>Download All Frames as ZIP</button>
+
+<div id="canvasContainer">
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+</div>
+
+<!-- Include JSZip and FileSaver.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<script src="bloom.js"></script>
 </body>
 </html>

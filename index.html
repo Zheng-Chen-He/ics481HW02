@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Effect App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Image Processing Toolkit</h1>
+
+<input type="file" id="fileInput" accept=".ppm" />
+
+<!-- Three separate buttons for different animations -->
+<button id="animateThreshold">Animate Thresholding</button>
+<button id="animateBlur">Animate Blur</button>
+<button id="applyBloom">Apply Bloom Effect</button>
+
+<button id="saveImage">Save Output</button>
+
+<div>
+    <img id="preview" alt="Preview Image" />
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>
